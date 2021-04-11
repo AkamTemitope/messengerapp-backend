@@ -10,7 +10,7 @@ import { SocketManager } from './socket/socket.js'
 
 ///// app config
 
-const port = process.env.PORT | 9000
+const port = process.env.PORT || 9000
 const app = express()
 const server = createServer(app)
 const io = new Server(server)
