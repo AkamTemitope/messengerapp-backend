@@ -29,7 +29,7 @@ router.patch("/updateBlock/:id", updateBlock)
 //// Delete action(s)
 
 // Delete contact
-router.delete("/deleteContact", deleteContact)
+router.delete("/deleteContact/:id", deleteContact)
 // Delete a message
 router.delete("/deleteMessage/:id", deleteMessage)
 // Delete all messages

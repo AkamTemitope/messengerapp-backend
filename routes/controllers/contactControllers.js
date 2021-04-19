@@ -68,7 +68,7 @@ export const newContact = (req, res) => {
     })
 }
 
-export const newMessage = ( req, res) => {
+export const newMessage = (req, res) => {
     const id = req.params.id
     const messageData = req.body.message
 
@@ -134,7 +134,7 @@ export const updateBlock = (req, res) => {
     })
 }
 
-export const deleteMessage = async ( req, res) => {
+export const deleteMessage = async (req, res) => {
     const id = req.params.id
     const messageId = req.body._id
     const contact = await Contact.findById(id)
@@ -155,7 +155,7 @@ export const deleteMessage = async ( req, res) => {
         })
 }
 
-export const deleteAllMessages = async ( req, res) => {
+export const deleteAllMessages = async (req, res) => {
     const id = req.params.id
 
     Contact.findByIdAndUpdate(id, { $set: { messages: [] , last_message: null }},
@@ -171,7 +171,7 @@ export const deleteAllMessages = async ( req, res) => {
         })
 }
 
-export const deleteContact = async ( req, res) => {
+export const deleteContact = async (req, res) => {
     const id = req.params.id
     const contact = await Contact.findById(id)
     const contactMembers = contact.members

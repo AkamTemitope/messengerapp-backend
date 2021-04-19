@@ -3,9 +3,11 @@ import { getAllUser, getUserByEmail, getUserById, newUser, updateName, updatePho
 
 const router = express.Router()
 
-//// Get action(s)  
 
+//// Get action(s)  
+  
 router.get("/exist", userExists)
+
 router.get("/all", getAllUser)
 router.get("/user/:id", getUserById)
 router.get("/email", getUserByEmail)
@@ -26,3 +28,4 @@ router.patch("updatePhoto/:id", updatePhoto)
 
 
 export default router
+

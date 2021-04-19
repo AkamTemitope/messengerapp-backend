@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 const userSchema = Schema(
 {   
     username: String ,
-    photoUrl: { type: String, default: "https://yt3.ggpht.com/a/AATXAJzVcPcvV7ren_sqeF250M1ibUVhvGA2ayTl7PI7=s900-c-k-c0xffffffff-no-rj-mo" },
+    photoUrl: { type: String, default: "https://i.postimg.cc/MHgmGcg4/contact.jpg" },
     email: { type: String, lowercase: true, unique: true },
     is_active: { type: Boolean, default: false },
     contacts: [ { type: Schema.Types.ObjectId, ref: "contacts" } ],
@@ -18,3 +18,4 @@ const userSchema = Schema(
 const User = mongoose.model('users', userSchema);
 
 export default User
+
