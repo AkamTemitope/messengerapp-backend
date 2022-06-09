@@ -40,11 +40,14 @@ app.use(express.json())
 ///// db config
  
 const mongoURI = process.env.DATABASE_URL
+// const mongoURI = "mongodb+srv://akam:temitope@database.qpdex.mongodb.net/TwebchatT?retryWrites=true&w=majority"
+
 mongoose.connect(mongoURI, {
     useCreateIndex: true,
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
+
 const database = mongoose.connection
 database.once("open", () => { console.log('Database Connected') })
 
